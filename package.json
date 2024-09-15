@@ -1,0 +1,25 @@
+{
+  "name": "talitrix",
+  "version": "1.0.0",
+  "description": "talitrix automated",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "cucumber-js",
+    "generate-report": "ts-node index.ts"
+  },
+  "author": "Raaz",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.8.0",
+    "@playwright/test": "^1.46.1",
+    "cucumber-html-reporter": "^5.5.1",
+    "dotenv": "^16.4.5",
+    "playwright": "^1.46.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "moment": "^2.30.1"
+  }
+}
