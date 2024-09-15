@@ -15,33 +15,28 @@ jobs:
         node-version: [18.x]
 
     steps:
-    # Checkout the repository
     - uses: actions/checkout@v4
-
-    # Set up Node.js
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
 
-    # Install all dependencies
     - name: Install dependencies
       run: npm ci
 
-    # Install Playwright dependencies (system and browsers)
     - name: Install Playwright dependencies
       run: npx playwright install --with-deps
 
-    # Ensure the reports directory exists
     - name: Create reports directory
       run: mkdir -p reports
 
-    # Run the tests using cucumber
-    - name: Run Cucumber Tests
+    # Run the tests in headless mode
+    - name: Run Cucumber Tests in headless mode
       run: npm test
+      env:
+        PLAYWRIGHT_HEADLESS: "true"
 
-    # Upload test report artifacts
     - name: Upload Test Artifacts
       uses: actions/upload-artifact@v3
       if: always()
@@ -50,6 +45,5 @@ jobs:
         path: reports
         retention-days: 2
 
-    # Build the project (optional, only if your project has a build step)
     - name: Build project
       run: npm run build --if-present
