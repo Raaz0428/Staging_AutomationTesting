@@ -16,6 +16,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
@@ -26,16 +27,19 @@ jobs:
       run: npm ci
 
     - name: Install Playwright dependencies
-      run: npx playwright install --with-deps
+      run: npx playwright install-deps  # Install OS-level dependencies for Playwright
+
+    - name: Install Playwright browsers
+      run: npx playwright install  # Install Playwright browsers
 
     - name: Create reports directory
       run: mkdir -p reports
 
     # Run the tests in headless mode
     - name: Run Cucumber Tests in headless mode
-      run: npm test
+      run: xvfb-run --auto-servernum --server-args="-screen 0 1024x768x24" npm test
       env:
-        PLAYWRIGHT_HEADLESS: "true"
+        PLAYWRIGHT_HEADLESS: "true"  # Ensures headless mode is enforced
 
     - name: Upload Test Artifacts
       uses: actions/upload-artifact@v3
