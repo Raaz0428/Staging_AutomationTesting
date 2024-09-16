@@ -41,10 +41,6 @@ jobs:
       env:
         PLAYWRIGHT_HEADLESS: "true"  # Ensures headless mode is enforced
 
-    # Generate Cucumber report after tests
-    - name: Generate Cucumber Report
-      run: npm run generate-report
-
     - name: Upload Test Artifacts
       uses: actions/upload-artifact@v3
       if: always()
@@ -55,3 +51,17 @@ jobs:
 
     - name: Build project
       run: npm run build --if-present
+
+    - name: Send email with report
+      uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: smtp.office365.com  # Azure/Outlook SMTP server
+        server_port: 587  # Port for STARTTLS encryption
+        username: ${{ secrets.EMAIL_USERNAME }}  # Your email username from GitHub Secrets
+        password: ${{ secrets.EMAIL_PASSWORD }}  # Your email password from GitHub Secrets
+        subject: Cucumber Report from GitHub Actions
+        body: Please find attached the Cucumber report.
+        to: slingampelly@talitrix.com  # Recipient email
+        from: rajsekhar@talitrix.com  # Sender email
+        secure: true  # Enable STARTTLS
+        attachments: reports/cucumber_report_bootstrap.html  # Path to the report file
