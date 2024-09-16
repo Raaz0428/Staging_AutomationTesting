@@ -1,0 +1,157 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "tailtrix_login-authentication;login-&-logut-should-be-success",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Login & logut should be success",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 644523200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User navigative to Tailtrix application",
+            "match": {
+              "location": "e2etests\\test\\steps\\login.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6927509099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "User enter valid Email address",
+            "match": {
+              "location": "e2etests\\test\\steps\\login.steps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4124351599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "User enter valid password",
+            "match": {
+              "location": "e2etests\\test\\steps\\login.steps.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51856800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "User able to click on Login button",
+            "match": {
+              "location": "e2etests\\test\\steps\\login.steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10132546599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "User is able to render Talitrix Application",
+            "match": {
+              "location": "e2etests\\test\\steps\\login.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6037254299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "User should be able to go to the right top of the page and click on manage account icon",
+            "match": {
+              "location": "e2etests\\test\\steps\\login.steps.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1093044399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "User should be able to click on the icon to view below records Profile Settings Logout",
+            "match": {
+              "location": "e2etests\\test\\steps\\login.steps.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1077237499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "User should be able to click on Logout button",
+            "match": {
+              "location": "e2etests\\test\\steps\\login.steps.ts:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1107369299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "User should be able to Logout from the application and should appear login page",
+            "match": {
+              "location": "e2etests\\test\\steps\\login.steps.ts:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2022353199
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 96696900
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "tailtrix_login-authentication",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Tailtrix_login Authentication",
+    "tags": [],
+    "uri": "e2etests\\test\\features\\login.feature"
+  }
+]

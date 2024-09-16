@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<testsuite failures="0" skipped="0" name="cucumber-js" time="34.751787797" tests="1">
+  <testcase classname="Tailtrix_login Authentication" name="Login &amp; logut should be success" time="34.751787797">
+    <system-out><![CDATA[Given User navigative to Tailtrix application.............................passed
+When User enter valid Email address.......................................passed
+When User enter valid password............................................passed
+Then User able to click on Login button...................................passed
+When User is able to render Talitrix Application..........................passed
+Then User should be able to go to the right top of the page and click o...passed
+When User should be able to click on the icon to view below records Pro...passed
+Then User should be able to click on Logout button........................passed
+When User should be able to Logout from the application and should appe...passed]]></system-out>
+  </testcase>
+</testsuite>
