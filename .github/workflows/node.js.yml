@@ -56,8 +56,8 @@ jobs:
       with:
         server_address: smtp.office365.com  # Azure/Outlook SMTP server
         server_port: 587  # Port for STARTTLS
-        username: ${{ secrets.EMAIL_USERNAME }}  # Your email username
-        password: ${{ secrets.EMAIL_PASSWORD }}  # Your email password
+        username: "rdonthula@syncorsol.com"  # Your email username
+        password: "Raaz@0428"  # Your email password
         subject: Cucumber Report from GitHub Actions
         body: Please find attached the Cucumber report.
         to: slingampelly@syncorsol.com  # Recipient email
