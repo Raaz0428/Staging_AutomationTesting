@@ -56,7 +56,7 @@ jobs:
       with:
         server_address: smtp.office365.com  # Azure/Outlook SMTP server
         server_port: 587  # Port for STARTTLS
-        username: "rdonthula@syncorsol.com"  # Your email username
+        username: "rajsekhar@talitrix.com"  # Your email username
         password: "Raaz@0428"  # Your email password
         subject: Cucumber Report from GitHub Actions
         body: Please find attached the Cucumber report.
