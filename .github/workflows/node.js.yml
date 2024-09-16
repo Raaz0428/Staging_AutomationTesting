@@ -41,6 +41,10 @@ jobs:
       env:
         PLAYWRIGHT_HEADLESS: "true"  # Ensures headless mode is enforced
 
+    # Generate Cucumber report after tests
+    - name: Generate Cucumber Report
+      run: npm run generate-report
+
     - name: Upload Test Artifacts
       uses: actions/upload-artifact@v3
       if: always()
