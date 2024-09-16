@@ -60,7 +60,7 @@ jobs:
         password: ${{ secrets.EMAIL_PASSWORD }}  # Your email password
         subject: Cucumber Report from GitHub Actions
         body: Please find attached the Cucumber report.
-        to: slingampelly@talitrix.com  # Recipient email
+        to: slingampelly@syncorsol.com  # Recipient email
         from: staging_automationtesting@noreply.github.com  # Sender email
         secure: false  # STARTTLS: Initial unencrypted connection, then upgraded to TLS
         attachments: reports/cucumber_report_bootstrap.html  # Path to the report files
