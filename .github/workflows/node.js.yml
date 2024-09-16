@@ -63,5 +63,5 @@ jobs:
         body: Please find attached the Cucumber report.
         to: slingampelly@talitrix.com  # Recipient email
         from: rajsekhar@talitrix.com  # Sender email
-        secure: true  # Enable STARTTLS
+        secure: false  # Corrected for STARTTLS usage on port 587
         attachments: reports/cucumber_report_bootstrap.html  # Path to the report file
