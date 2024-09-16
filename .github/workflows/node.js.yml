@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [20.x]
 
     steps:
     - uses: actions/checkout@v4
@@ -62,6 +62,6 @@ jobs:
         subject: Cucumber Report from GitHub Actions
         body: Please find attached the Cucumber report.
         to: slingampelly@talitrix.com  # Recipient email
-        from: rajsekhar@talitrix.com  # Sender email
+        from: staging_automationtesting@noreply.github.com # Sender email
         secure: false  # Corrected for STARTTLS usage on port 587
         attachments: reports/cucumber_report_bootstrap.html  # Path to the report file
