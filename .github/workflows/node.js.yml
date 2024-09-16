@@ -63,5 +63,5 @@ jobs:
     to: slingampelly@talitrix.com  # Recipient email
     from: staging_automationtesting@noreply.github.com  # Sender email
     secure: false  # STARTTLS: Initial unencrypted connection, then upgraded to TLS
-    attachments: reports/cucumber_report_bootstrap.html  # Path to the report file
+    attachments: reports/cucumber_report_bootstrap.html  # Path to the report files
     
