@@ -65,6 +65,7 @@ jobs:
         username: "rajsekhar@talitrix.com"
         password: "Raaz@0428"
         subject: Build Success - ${{ github.repository }}
+        from: "staging_automationtesting@noreply.github.com"
         body: |
           The build and tests have passed successfully.
 
@@ -81,6 +82,7 @@ jobs:
         username: "rajsekhar@talitrix.com"
         password: "Raaz@0428"
         subject: Build Failure - ${{ github.repository }}
+        from: "staging_automationtesting@noreply.github.com"
         body: |
           The build or tests have failed.
 
