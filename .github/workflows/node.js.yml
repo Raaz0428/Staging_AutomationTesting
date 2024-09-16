@@ -35,11 +35,10 @@ jobs:
     - name: Create reports directory
       run: mkdir -p reports
 
-    # Run the tests in headless mode
     - name: Run Cucumber Tests in headless mode
       run: xvfb-run --auto-servernum --server-args="-screen 0 1024x768x24" npm test
       env:
-        PLAYWRIGHT_HEADLESS: "true"  # Ensures headless mode is enforced
+        PLAYWRIGHT_HEADLESS: "true"
 
     - name: Upload Test Artifacts
       uses: actions/upload-artifact@v3
@@ -62,6 +61,6 @@ jobs:
         subject: Cucumber Report from GitHub Actions
         body: Please find attached the Cucumber report.
         to: slingampelly@talitrix.com  # Recipient email
-        from: staging_automationtesting@noreply.github.com # Sender email
-        secure: false  # Corrected for STARTTLS usage on port 587
+        from: staging_automationtesting@noreply.github.com  # Sender email
+        secure: true  # Enable STARTTLS
         attachments: reports/cucumber_report_bootstrap.html  # Path to the report file
